@@ -1,0 +1,23 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Actually me_irl
+email: arandomawesomegeek@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  I'm just another computer programmer. Who happens to like eggs.
+  Eggs are great. There's so many ways to cook them, you know? I
+  certainly do. You should try making eggs sometime.
+baseurl: ""
+url: "http://h313.github.io"
+twitter_username: w_h313
+github_username: h313
+
+markdown: kramdown
+
+gems:
+  - jekyll-angular

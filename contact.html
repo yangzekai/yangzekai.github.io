@@ -1,0 +1,77 @@
+---
+title: Contact
+layout: default
+---
+<link type="text/css" rel="stylesheet" href="{{ "/css/form.css" | prepend: site.url }}"/>
+<script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+<script type="text/javascript" src="{{ "/js/angular.min.js" | prepend: site.url }}"></script>
+<script type="text/javascript" src="{{ "/js/angular-recaptcha.min.js" | prepend: site.url }}"></script>
+<script type="text/javascript" src="{{ "/js/contactApp.js" | prepend: site.url }}"></script>
+
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h1 class="header center blue-grey-text text-lighten-3">Contact Me</h1>
+      <br><br>
+    </div>
+  </div>
+  <div class="parallax"><img src="{{ '/img/banner1.jpg' | prepend: site.url }}"></div>
+</div>
+<div ng-app="contactApp">
+  <div ng-controller="ContactController">
+    <div class="container">
+      <form ng-submit="submit()" ng-show="state1 && state2">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix blue-grey-text">account_circle</i>
+            <input placeholder="John Doe" id="name" type="text" class="validate" ng-model="name">
+            <label for="name">Name</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix blue-grey-text">email</i>
+            <input placeholder="john.doe@company.com" id="email" type="email" class="validate" ng-model="email">
+            <label for="email">Email</label>
+            <label for="email" data-error="Nice try!" data-success="Thanks!">Email</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix blue-grey-text">mode_edit</i>
+            <textarea placeholder="Words" class="materialize-textarea validate" id="words" type="text" ng-model="words"></textarea>
+            <label for="words">Message</label>
+          </div>
+          <div class="col s12">
+            <div vc-recaptcha ng-model="recaptchaResponse" key="'6LcIyyMTAAAAAN3g9K7rKlcPut06zCylYal8Xl-L'"></div>
+          </div>
+        </div>
+        <div class="row center">
+          <button class="btn waves-effect waves-light blue-grey" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </form>
+      <div class="row center" ng-show="!state1 && state2">
+        <br><br><br><br>
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-grey-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+        <br><br><br><br>
+      </div>
+      <div class="row center" ng-show="state1 && !state2">
+        <br><br>
+        <i class="blue-grey-text large material-icons">error_outline</i>
+        <p class="light">Oops! Something went wrong! You probably didn't complete the reCaptcha!</p>
+      </div>
+      <div class="row center" ng-show="!state1 && !state2">
+        <i class="blue-grey-text large material-icons">done</i>
+        <p class="light">Thanks!</p>
+      </div>
+    </div>
+  </div>

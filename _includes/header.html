@@ -1,0 +1,25 @@
+<header class="site-header">
+  <nav>
+    <div class="nav-wrapper blue-grey">
+      <div class="container">
+        <a href="#" class="brand-logo">{{ site.title }}</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="{{ '/index.html' | prepend: site.url }}">Home</a></li>
+          <li><a href="{{ '/about.html' | prepend: site.url }}">About</a></li>
+          <li><a href="{{ '/projects.html' | prepend: site.url }}">Projects</a></li>
+          <li><a href="{{ '/posts.html' | prepend: site.url }}">Blog</a></li>
+          <li><a href="{{ '/contact.html' | prepend: site.url }}">Contact</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav blue-grey">
+          <li><a class="white-text" href="{{ '/index.html' | prepend: site.url }}">Home</a></li>
+          <li><a class="white-text" href="{{ '/about.html' | prepend: site.url }}">About</a></li>
+          <li><a class="white-text" href="{{ '/projects.html' | prepend: site.url }}">Projects</a></li>
+          <li><a class="white-text" href="{{ '/posts.html' | prepend: site.url }}">Blog</a></li>
+          <li><a class="white-text" href="{{ '/contact.html' | prepend: site.url }}">Contact</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </div>
+  </nav>
+</header>
