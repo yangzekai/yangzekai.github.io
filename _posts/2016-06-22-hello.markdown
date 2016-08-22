@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Hello!"
+title:  "第一篇博客"
 date:   2016-06-22 16:28:22 -0400
 categories: introduction update
-summary: "First post!"
+summary: "第一篇博客!"
 ---
 This is a test post to make sure all the CSS is working
