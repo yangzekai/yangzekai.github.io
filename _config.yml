@@ -1,10 +1,10 @@
 # user variables, change this to make custom site.
 
-name: Yann
-desc: Yann's blog
+name: 杨泽楷的技术博客
+desc: 杨泽楷的技术博客
 author:
   name: Yann
-  avatar: //gravatar.com/avatar/daa1cc36ed2ab0d13045d5cd2431cde9?s=320
+  avatar: /yangzekai.github.io/images/daa1cc36ed2ab0d13045d5cd2431cde9?s=320
   profile: |
     杨泽楷的技术博客
   socials:
@@ -21,7 +21,7 @@ license: MIT License
 
 # theme variables, change this to make site looks best.
 baseurl: /yangzekai.github.io
-paginate: 2
+paginate: 10
 
 
 # system variables, do not change unless you knew what's it does.
